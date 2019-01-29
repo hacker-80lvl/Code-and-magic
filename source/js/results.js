@@ -18,7 +18,6 @@ var GetMaxTime = function(times) {
     return max_index2;
 };
 var GetPlayerRange = function(index, MAX_RANGE, times) {
-    console.log(times);
     var max_index = GetMaxTime(times);
     var range;
     
@@ -42,7 +41,6 @@ window.renderStatistics = function(ctx, players, times) {
     for (let i = 0; i < players.length; i++)
     {
         ctx.fillStyle = 'rgb(0,' + Math.floor(Math.random() * 150) +', 255)';
-        console.log(ctx.fillStyle);
         if(players[i] == 'Вы')
             ctx.fillStyle = '#f00';
         ctx.fillRect(pos_x, pos_y - 10, 30, -GetPlayerRange(i, MAX_RANGE, times));
